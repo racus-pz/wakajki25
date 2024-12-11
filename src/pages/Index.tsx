@@ -61,7 +61,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background dark:bg-background">
+    <div className="min-h-screen bg-background dark:bg-background font-inter">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Video */}
@@ -90,7 +90,7 @@ const Index = () => {
             <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-festive bg-festive/10 rounded-full">
               Limited Time Offer
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-poppins font-extrabold text-white mb-6">
               Transform Your Life This
               <span className="text-festive"> Holiday Season</span>
             </h1>
@@ -108,7 +108,7 @@ const Index = () => {
                   transition={{ duration: 0.5 }}
                   className="backdrop-blur-md bg-white/10 dark:bg-black/20 p-4 rounded-xl border border-white/20 shadow-xl"
                 >
-                  <div className="text-4xl font-bold text-white mb-1">
+                  <div className="text-4xl font-poppins font-extrabold text-white mb-1">
                     {value}
                   </div>
                   <div className="text-sm text-white/70 capitalize">{key}</div>
@@ -119,7 +119,7 @@ const Index = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-festive text-white rounded-full font-semibold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-festive/90"
+              className="px-8 py-4 bg-festive text-white rounded-full font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-festive/90"
             >
               Sign Up Now
             </motion.button>
@@ -142,7 +142,7 @@ const Index = () => {
                 <div className="w-12 h-12 mb-4 text-festive flex items-center justify-center bg-festive/10 rounded-xl">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-white">
+                <h3 className="text-xl font-poppins font-extrabold mb-2 text-white">
                   {benefit.title}
                 </h3>
                 <p className="text-white/70">{benefit.description}</p>

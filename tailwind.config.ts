@@ -18,16 +18,19 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
       colors: {
         pine: "#2C5530",
         festive: "#D64045",
         gold: "#BFA181",
         charcoal: "#2F2F2F",
         snow: "#F8F9FA",
-        border: {
-          DEFAULT: "hsl(214.3 31.8% 91.4%)",
-          dark: "hsl(217.2 32.6% 17.5%)",
-        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
