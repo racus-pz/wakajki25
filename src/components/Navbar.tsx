@@ -6,11 +6,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <a href="https://rmggym.pl" className="flex items-center">
               <img 
                 src="/images/rmggym-logo-basic@2x.webp" 
                 alt="RMG GYM" 
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </a>
           </div>
