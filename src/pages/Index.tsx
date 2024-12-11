@@ -33,7 +33,7 @@ const Index = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="https://cdn.gpteng.co/videos/gym-dark.mp4" type="video/mp4" />
+            <source src="/videos/santa.mp4" type="video/mp4" />
             Twoja przeglądarka nie wspiera odtwarzania wideo.
           </video>
           <div className="absolute inset-0 bg-black/50" />
@@ -65,7 +65,7 @@ const Index = () => {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-accent text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90"
             >
-              Zapisz się teraz
+              ZAREESTRUJ SIĘ
             </motion.button>
           </motion.div>
         </div>
