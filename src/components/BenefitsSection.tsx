@@ -10,12 +10,11 @@ const BenefitsSection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-poppins font-extrabold text-white mb-6">
-            Świąteczna Promocja w RMG GYM
+          <h2 className="text-2xl md:text-3xl font-poppins font-extrabold text-white mb-6">
+            Co musisz zrobić, aby uzyskać dostęp do świątecznego karnetu?
           </h2>
           <p className="text-lg text-white/80 mb-8">
-            Nie przegap wyjątkowej okazji! Dołącz do naszej świątecznej społeczności
-            i rozpocznij swoją przygodę z fitness jeszcze przed Nowym Rokiem.
+            Zarejestruj się i czekaj na wiadomość od Mikołaja!
           </p>
           
           <motion.a
@@ -30,7 +29,7 @@ const BenefitsSection = () => {
           </motion.a>
 
           <p className="text-sm text-white/60">
-            * Oferta ważna do wyczerpania miejsc. Liczba karnetów w promocji jest ograniczona.
+            * Pssst... prezent będzie dostępny przez bardzo krótki czas.
           </p>
         </motion.div>
       </div>
