@@ -51,11 +51,11 @@ const Index = () => {
               Oferta Limitowana
             </span>
             <h1 className="text-5xl md:text-7xl font-poppins font-extrabold text-white mb-6">
-              Zmień Swoje Życie w Te
-              <span className="text-accent"> Święta</span>
+              Odbierz Świąteczny 
+              <span className="text-accent"> karnet na siłownię w Super Cenie!</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Dołącz przed Świętami i odblokuj ekskluzywne korzyści członkowskie, które rozpoczną Twoją drogę do fitnessu.
+              Odliczamy dni do wyjątkowej okazji. Przygotowaliśmy coś specjalnego, co pomoże Ci w realizacji noworocznego postanowienia i wkroczeniu w 2025 rok z nową energią.
             </p>
 
             <CountdownTimer />
@@ -65,7 +65,7 @@ const Index = () => {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-accent text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90"
             >
-              ZAREESTRUJ SIĘ
+              ZAREJESTRUJ SIĘ
             </motion.button>
           </motion.div>
         </div>
