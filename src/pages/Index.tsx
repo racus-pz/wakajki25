@@ -44,18 +44,18 @@ const Index = () => {
   const benefits = [
     {
       icon: <Dumbbell className="w-8 h-8" />,
-      title: "Premium Equipment",
-      description: "State-of-the-art facilities for your fitness journey",
+      title: "Profesjonalny Sprzęt",
+      description: "Najnowocześniejsze wyposażenie dla Twojej drogi do fitnessu",
     },
     {
       icon: <Gift className="w-8 h-8" />,
-      title: "Special Bonus",
-      description: "Sign up before Christmas and get 2 months free",
+      title: "Specjalny Bonus",
+      description: "Zapisz się przed Świętami i otrzymaj 2 miesiące gratis",
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
-      title: "Personal Training",
-      description: "1-on-1 sessions with certified trainers",
+      title: "Trening Personalny",
+      description: "Sesje 1-na-1 z certyfikowanymi trenerami",
     },
   ];
 
@@ -71,7 +71,7 @@ const Index = () => {
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src="https://cdn.gpteng.co/videos/gym-dark.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+            Twoja przeglądarka nie wspiera odtwarzania wideo.
           </video>
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -85,14 +85,14 @@ const Index = () => {
             className="text-center"
           >
             <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-accent bg-accent/10">
-              Limited Time Offer
+              Oferta Limitowana
             </span>
             <h1 className="text-5xl md:text-7xl font-poppins font-extrabold text-white mb-6">
-              Transform Your Life This
-              <span className="text-accent"> Holiday Season</span>
+              Zmień Swoje Życie w Te
+              <span className="text-accent"> Święta</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join before Christmas and unlock exclusive membership benefits that will kickstart your fitness journey.
+              Dołącz przed Świętami i odblokuj ekskluzywne korzyści członkowskie, które rozpoczną Twoją drogę do fitnessu.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
@@ -107,7 +107,12 @@ const Index = () => {
                   <div className="text-4xl font-poppins font-extrabold text-white mb-1">
                     {value}
                   </div>
-                  <div className="text-sm text-white/70 capitalize">{key}</div>
+                  <div className="text-sm text-white/70 capitalize">
+                    {key === 'days' ? 'dni' : 
+                     key === 'hours' ? 'godzin' : 
+                     key === 'minutes' ? 'minut' : 
+                     'sekund'}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -117,7 +122,7 @@ const Index = () => {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-accent text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90"
             >
-              Sign Up Now
+              Zapisz się teraz
             </motion.button>
           </motion.div>
         </div>
