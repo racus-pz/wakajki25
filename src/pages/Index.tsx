@@ -11,6 +11,9 @@ const Index = () => {
   });
 
   useEffect(() => {
+    // Add dark mode class to html element
+    document.documentElement.classList.add('dark');
+    
     const calculateTimeLeft = () => {
       const difference = +new Date("2024-12-25") - +new Date();
       let timeLeft = {
@@ -58,9 +61,24 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-snow">
+    <div className="min-h-screen bg-background dark:bg-background">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="https://cdn.gpteng.co/videos/gym-dark.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
+        </div>
+        
         <div className="absolute inset-0 bg-gradient-to-b from-pine/20 to-transparent" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -72,11 +90,11 @@ const Index = () => {
             <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-festive bg-festive/10 rounded-full">
               Limited Time Offer
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold text-charcoal mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Transform Your Life This
               <span className="text-festive"> Holiday Season</span>
             </h1>
-            <p className="text-lg md:text-xl text-charcoal/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Join before Christmas and unlock exclusive membership benefits that will kickstart your fitness journey.
             </p>
 
@@ -88,12 +106,12 @@ const Index = () => {
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5 }}
-                  className="backdrop-blur-md bg-white/30 p-4 rounded-xl border border-white/20 shadow-xl"
+                  className="backdrop-blur-md bg-white/10 dark:bg-black/20 p-4 rounded-xl border border-white/20 shadow-xl"
                 >
-                  <div className="text-4xl font-bold text-charcoal mb-1">
+                  <div className="text-4xl font-bold text-white mb-1">
                     {value}
                   </div>
-                  <div className="text-sm text-charcoal/70 capitalize">{key}</div>
+                  <div className="text-sm text-white/70 capitalize">{key}</div>
                 </motion.div>
               ))}
             </div>
@@ -110,7 +128,7 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background dark:bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -119,15 +137,15 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="p-6 rounded-2xl bg-snow hover:shadow-xl transition-all duration-300"
+                className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm hover:shadow-xl transition-all duration-300 border border-white/10"
               >
-                <div className="w-12 h-12 mb-4 text-pine flex items-center justify-center bg-pine/10 rounded-xl">
+                <div className="w-12 h-12 mb-4 text-festive flex items-center justify-center bg-festive/10 rounded-xl">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-charcoal">
+                <h3 className="text-xl font-semibold mb-2 text-white">
                   {benefit.title}
                 </h3>
-                <p className="text-charcoal/70">{benefit.description}</p>
+                <p className="text-white/70">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
