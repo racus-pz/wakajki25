@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Clock, Gift, Dumbbell, Sparkles } from "lucide-react";
+import { Clock, Gift, Dumbbell, Sparkles, LogIn, Facebook } from "lucide-react";
 import Snowfall from 'react-snowfall';
 
 const Index = () => {
@@ -71,6 +71,42 @@ const Index = () => {
           zIndex: 1000,
         }}
       />
+      
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <div className="flex items-center">
+              <a href="/" className="text-2xl font-poppins font-bold text-white">
+                RMG GYM
+              </a>
+            </div>
+            
+            {/* Navigation Links */}
+            <div className="flex items-center space-x-6">
+              <a 
+                href="https://rmggym.pl/logowanie" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-white hover:text-accent transition-colors"
+              >
+                <LogIn className="w-5 h-5" />
+                <span>Logowanie</span>
+              </a>
+              <a 
+                href="https://www.facebook.com/RMGgym" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-accent transition-colors"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <video
