@@ -6,8 +6,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-poppins font-bold text-white">
-              RMG GYM
+            <a href="/" className="flex items-center">
+              <img 
+                src="/images/rmggym-logo-basic@2x.webp" 
+                alt="RMG GYM" 
+                className="h-8 w-auto"
+              />
             </a>
           </div>
           
