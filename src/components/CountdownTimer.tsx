@@ -8,6 +8,7 @@ const CountdownTimer = () => {
     minutes: 0,
     seconds: 0,
   });
+  const [isExpired, setIsExpired] = useState(false);
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -26,6 +27,8 @@ const CountdownTimer = () => {
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60),
         };
+      } else {
+        setIsExpired(true);
       }
 
       return timeLeft;

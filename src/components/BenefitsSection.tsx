@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const BenefitsSection = () => {
   return (
-    <section className="py-20 bg-black">
+    <section className="py-40 bg-black">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,13 +18,16 @@ const BenefitsSection = () => {
             i rozpocznij swoją przygodę z fitness jeszcze przed Nowym Rokiem.
           </p>
           
-          <motion.button
+          <motion.a
+            href="https://rmggym.pl/rejestracja"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-accent text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90 mb-8"
+            className="inline-block px-8 py-4 bg-accent text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90 mb-8"
           >
             ZAPISUJĘ SIĘ NA LISTĘ ŚW. MIKOŁAJA
-          </motion.button>
+          </motion.a>
 
           <p className="text-sm text-white/60">
             * Oferta ważna do wyczerpania miejsc. Liczba karnetów w promocji jest ograniczona.

@@ -10,6 +10,10 @@ const Index = () => {
     document.documentElement.classList.add('dark');
   }, []);
 
+  const registrationUrl = new Date() > new Date("2024-12-25") 
+    ? "https://rmggym.pl"
+    : "https://rmggym.pl/rejestracja";
+
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
       <Snowfall 
@@ -60,13 +64,16 @@ const Index = () => {
 
             <CountdownTimer />
 
-            <motion.button
+            <motion.a
+              href={registrationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-accent text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90"
+              className="inline-block px-8 py-4 bg-accent text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90"
             >
               ZAREJESTRUJ SIĘ
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </section>
