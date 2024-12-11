@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Clock, Gift, Dumbbell, Sparkles } from "lucide-react";
+import Snowfall from 'react-snowfall';
 
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -61,6 +62,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
+      <Snowfall 
+        snowflakeCount={200}
+        style={{
+          position: 'fixed',
+          width: '100vw',
+          height: '100vh',
+          zIndex: 1000,
+        }}
+      />
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <video
