@@ -8,11 +8,21 @@ const CountdownTimer = () => {
     minutes: 0,
     seconds: 0,
   });
-  const [isExpired, setIsExpired] = useState(false);
+  const [isFirstPhase, setIsFirstPhase] = useState(true);
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const difference = +new Date("2024-12-25") - +new Date();
+      const firstDeadline = new Date("2024-12-24T23:59:59");
+      const secondDeadline = new Date("2024-12-26T23:59:59");
+      const now = new Date();
+      
+      let targetDate = firstDeadline;
+      if (now > firstDeadline) {
+        setIsFirstPhase(false);
+        targetDate = secondDeadline;
+      }
+
+      const difference = +targetDate - +now;
       let timeLeft = {
         days: 0,
         hours: 0,
@@ -27,8 +37,6 @@ const CountdownTimer = () => {
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60),
         };
-      } else {
-        setIsExpired(true);
       }
 
       return timeLeft;
