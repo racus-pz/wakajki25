@@ -13,6 +13,10 @@ const BenefitsSection = ({ isFirstPhase }: BenefitsSectionProps) => {
     "plan dietetyczny"
   ];
 
+  const registrationUrl = isFirstPhase 
+    ? "https://rmggym.pl/rejestracja-simple?utm_source=landingSwieta&utm_campaign=swieta24&utm_content=landing"
+    : "https://rmggym.pl/swieta-promo";
+
   return (
     <section className="py-40 bg-black">
       <div className="container mx-auto px-4">
@@ -30,7 +34,7 @@ const BenefitsSection = ({ isFirstPhase }: BenefitsSectionProps) => {
           </p>
           
           <motion.a
-            href="https://rmggym.pl/rejestracja"
+            href={registrationUrl}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}

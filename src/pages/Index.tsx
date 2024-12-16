@@ -22,9 +22,9 @@ const Index = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const registrationUrl = new Date() > new Date("2024-12-26T23:59:59") 
-    ? "https://rmggym.pl"
-    : "https://rmggym.pl/rejestracja";
+  const registrationUrl = isFirstPhase 
+    ? "https://rmggym.pl/rejestracja-simple?utm_source=landingSwieta&utm_campaign=swieta24&utm_content=landing"
+    : "https://rmggym.pl/swieta-promo";
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
