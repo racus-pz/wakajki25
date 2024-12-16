@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: './', // Dodajemy base URL
+  base: mode === 'production' ? './' : '/', // Dynamically set base URL based on environment
   plugins: [
     react(),
     mode === 'development' &&
