@@ -33,7 +33,7 @@ export const initializeAnalytics = (gaTrackingId: string) => {
       s = b.getElementsByTagName(e)[0] as HTMLScriptElement;
       s?.parentNode?.insertBefore(t, s);
     })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js', 'fbq', document.createElement('script'), document.getElementsByTagName('script')[0]);
-    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('init', '422027899522163');
   }
 
   // Initialize TikTok Pixel
@@ -45,7 +45,7 @@ export const initializeAnalytics = (gaTrackingId: string) => {
       };
       const s = d.createElement(t) as HTMLScriptElement;
       s.async = true;
-      s.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=YOUR_TIKTOK_PIXEL_ID';
+      s.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=CTBFIGJC77U74JDR4EL0';
       const x = d.getElementsByTagName(t)[0] as HTMLScriptElement;
       x?.parentNode?.insertBefore(s, x);
     })(window, document, 'script');
