@@ -7,6 +7,8 @@ declare const fbq: any;
 declare global {
   interface Window {
     TiktokAnalytics: any;
+    fbq: any;
+    _fbq: any;
   }
 }
 
@@ -16,30 +18,37 @@ export const initializeAnalytics = (gaTrackingId: string) => {
 
   // Initialize Facebook Pixel
   if (typeof window !== 'undefined') {
-    !function(f:any,b:any,e:any,v:any,n:any,t:any,s:any)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    (function(f: Window, b: Document, e: string, v: string, n: string, t: HTMLScriptElement, s: HTMLScriptElement | null) {
+      if((f as any).fbq) return; (f as any).fbq = function() { ((f as any).fbq as any).callMethod ? 
+        ((f as any).fbq as any).callMethod.apply((f as any).fbq, arguments) : ((f as any).fbq as any).queue.push(arguments)
+      };
+      if(!(f as any)._fbq) (f as any)._fbq = (f as any).fbq;
+      (f as any).fbq.push = (f as any).fbq;
+      (f as any).fbq.loaded = true;
+      (f as any).fbq.version = '2.0';
+      (f as any).fbq.queue = [];
+      t = b.createElement(e) as HTMLScriptElement;
+      t.async = true;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s?.parentNode?.insertBefore(t, s);
+    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js', 'fbq', document.createElement('script'), document.getElementsByTagName('script')[0]);
     fbq('init', 'YOUR_PIXEL_ID');
   }
 
   // Initialize TikTok Pixel
   if (typeof window !== 'undefined') {
-    !function (w: any, d: any, t: any) {
-      w.TiktokAnalytics = w.TiktokAnalytics || {};
-      w.TiktokAnalytics.track = w.TiktokAnalytics.track || function () {
-        (w.TiktokAnalytics.q = w.TiktokAnalytics.q || []).push(arguments);
+    (function(w: Window, d: Document, t: string) {
+      (w as any).TiktokAnalytics = (w as any).TiktokAnalytics || {};
+      (w as any).TiktokAnalytics.track = (w as any).TiktokAnalytics.track || function() {
+        ((w as any).TiktokAnalytics.q = (w as any).TiktokAnalytics.q || []).push(arguments);
       };
-      var s = d.createElement(t);
+      const s = d.createElement(t) as HTMLScriptElement;
       s.async = true;
       s.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=YOUR_TIKTOK_PIXEL_ID';
-      var x = d.getElementsByTagName(t)[0];
-      x.parentNode.insertBefore(s, x);
-    }(window, document, 'script');
+      const x = d.getElementsByTagName(t)[0];
+      x?.parentNode?.insertBefore(s, x);
+    })(window, document, 'script');
   }
 };
 
