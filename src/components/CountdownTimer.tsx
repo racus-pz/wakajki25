@@ -12,7 +12,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const firstDeadline = new Date("2024-12-17T09:00:00");
+      const firstDeadline = new Date("2024-12-24T23:59:59");
       const secondDeadline = new Date("2025-01-06T23:59:59");
       const now = new Date();
       
