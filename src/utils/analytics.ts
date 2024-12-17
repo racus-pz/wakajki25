@@ -30,7 +30,7 @@ export const initializeAnalytics = (gaTrackingId: string) => {
       t = b.createElement(e) as HTMLScriptElement;
       t.async = true;
       t.src = v;
-      s = b.getElementsByTagName(e)[0];
+      s = b.getElementsByTagName(e)[0] as HTMLScriptElement;
       s?.parentNode?.insertBefore(t, s);
     })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js', 'fbq', document.createElement('script'), document.getElementsByTagName('script')[0]);
     fbq('init', 'YOUR_PIXEL_ID');
