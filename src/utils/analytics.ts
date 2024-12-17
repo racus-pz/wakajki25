@@ -46,7 +46,7 @@ export const initializeAnalytics = (gaTrackingId: string) => {
       const s = d.createElement(t) as HTMLScriptElement;
       s.async = true;
       s.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=YOUR_TIKTOK_PIXEL_ID';
-      const x = d.getElementsByTagName(t)[0];
+      const x = d.getElementsByTagName(t)[0] as HTMLScriptElement;
       x?.parentNode?.insertBefore(s, x);
     })(window, document, 'script');
   }
