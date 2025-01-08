@@ -13,7 +13,7 @@ const Index = () => {
     
     const checkPhase = () => {
       const firstDeadline = new Date("2024-12-21T00:00:59");
-      const secondDeadline = new Date("2025-01-06T23:59:59");
+      const secondDeadline = new Date("2025-01-31T23:59:59");
       const now = new Date();
       setIsFirstPhase(now <= firstDeadline);
     };
@@ -71,16 +71,21 @@ const Index = () => {
               {isFirstPhase ? (
                 "Odbierz Świąteczny karnet na siłownię w Super Cenie!"
               ) : (
-                "Odbierz Świąteczny karnet roczny na siłownię za 39 zł miesięcznie!"
+                "Promocja świąteczna PRZEDŁUŻONA!"
               )}
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               {isFirstPhase ? (
                 "Odliczamy dni do wyjątkowej okazji. Przygotowaliśmy coś specjalnego, co pomoże Ci w realizacji noworocznego postanowienia i wkroczeniu w 2025 rok z nową energią."
               ) : (
-                "Przygotowaliśmy coś specjalnego, co pomoże w realizacji noworocznego postanowienia i wkroczeniu w 2025 rok z nową energią. Do końca świątecznej promocji pozostało:"
+                "Odbierz świąteczny karnet roczny na siłownię za 69 zł miesięcznie."
               )}
             </p>
+            {!isFirstPhase && (
+              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Ulegliśmy Waszym licznym prośbom o przedłużenie promocji... Karnet świąteczny pomoże w realizacji noworocznego postanowienia i wkroczeniu w 2025 rok z nową energią. Do końca świątecznej promocji:
+              </p>
+            )}
 
             <CountdownTimer />
 
