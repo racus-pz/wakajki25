@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const BenefitsSection = () => {
@@ -11,7 +10,7 @@ const BenefitsSection = () => {
     "Darmowa konsultacja z trenerem personalnym"
   ];
 
-  const registrationUrl = "https://rmggym.pl/rejestracja-simple?utm_source=landingWiosna&utm_campaign=wiosna25&utm_content=landing";
+  const registrationUrl = "https://rmggym.pl/wiosna-promo";
 
   return (
     <section className="py-40 bg-black">

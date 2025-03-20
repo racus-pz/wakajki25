@@ -10,7 +10,7 @@ const Index = () => {
     document.documentElement.classList.add('dark');
   }, []);
 
-  const registrationUrl = "https://rmggym.pl/rejestracja-simple?utm_source=landingWiosna&utm_campaign=wiosna25&utm_content=landing";
+  const registrationUrl = "https://rmggym.pl/wiosna-promo";
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
@@ -27,7 +27,7 @@ const Index = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/videos/santa.mp4" type="video/mp4" />
+            <source src="/videos/promo-wiosna-2025.mp4" type="video/mp4" />
             Twoja przeglądarka nie wspiera odtwarzania wideo.
           </video>
           <div className="absolute inset-0 bg-black/50" />
