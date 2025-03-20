@@ -1,43 +1,20 @@
-import { useEffect, useState } from "react";
+
+import { useEffect } from "react";
 import { motion } from "framer-motion";
-import Snowfall from 'react-snowfall';
 import Navbar from "../components/Navbar";
-import CountdownTimer from "../components/CountdownTimer";
 import BenefitsSection from "../components/BenefitsSection";
+import SpringAnimation from "../components/SpringAnimation";
 
 const Index = () => {
-  const [isFirstPhase, setIsFirstPhase] = useState(true);
-
   useEffect(() => {
     document.documentElement.classList.add('dark');
-    
-    const checkPhase = () => {
-      const firstDeadline = new Date("2024-12-21T00:00:59");
-      const secondDeadline = new Date("2025-01-31T23:59:59");
-      const now = new Date();
-      setIsFirstPhase(now <= firstDeadline);
-    };
-
-    checkPhase();
-    const interval = setInterval(checkPhase, 1000);
-    return () => clearInterval(interval);
   }, []);
 
-  const registrationUrl = isFirstPhase 
-    ? "https://rmggym.pl/rejestracja-simple?utm_source=landingSwieta&utm_campaign=swieta24&utm_content=landing"
-    : "https://rmggym.pl/swieta-promo";
+  const registrationUrl = "https://rmggym.pl/rejestracja-simple?utm_source=landingWiosna&utm_campaign=wiosna25&utm_content=landing";
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
-      <Snowfall 
-        snowflakeCount={200}
-        style={{
-          position: 'fixed',
-          width: '100vw',
-          height: '100vh',
-          zIndex: 1000,
-        }}
-      />
+      <SpringAnimation />
       
       <Navbar />
 
@@ -68,26 +45,11 @@ const Index = () => {
               Oferta Limitowana
             </span>
             <h1 className="text-5xl md:text-7xl font-poppins font-extrabold text-white mb-6">
-              {isFirstPhase ? (
-                "Odbierz Świąteczny karnet na siłownię w Super Cenie!"
-              ) : (
-                "Promocja świąteczna PRZEDŁUŻONA!"
-              )}
+              Obudź się na wiosnę z RMG GYM
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              {isFirstPhase ? (
-                "Odliczamy dni do wyjątkowej okazji. Przygotowaliśmy coś specjalnego, co pomoże Ci w realizacji noworocznego postanowienia i wkroczeniu w 2025 rok z nową energią."
-              ) : (
-                "Odbierz świąteczny karnet roczny na siłownię za 69 zł miesięcznie."
-              )}
+              Trenuj przez pierwszy miesiąc już od 1 zł!
             </p>
-            {!isFirstPhase && (
-              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Ulegliśmy Waszym licznym prośbom o przedłużenie promocji... Karnet świąteczny pomoże w realizacji noworocznego postanowienia i wkroczeniu w 2025 rok z nową energią. Do końca świątecznej promocji:
-              </p>
-            )}
-
-            <CountdownTimer />
 
             <motion.a
               href={registrationUrl}
@@ -97,13 +59,13 @@ const Index = () => {
               whileTap={{ scale: 0.95 }}
               className="inline-block px-8 py-4 bg-accent text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90"
             >
-              {isFirstPhase ? "ZAREJESTRUJ SIĘ" : "KUPUJĘ KARNET ŚWIĄTECZNY"}
+              WCHODZĘ W TO!
             </motion.a>
           </motion.div>
         </div>
       </section>
 
-      <BenefitsSection isFirstPhase={isFirstPhase} />
+      <BenefitsSection />
     </div>
   );
 };
