@@ -30,7 +30,7 @@ const Index = () => {
             <source src="/videos/rmggym-birthday.mp4" type="video/mp4" />
             Twoja przeglądarka nie wspiera odtwarzania wideo.
           </video>
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
         
         <div className="absolute inset-0 bg-gradient-to-b from-pine/20 to-transparent" />
