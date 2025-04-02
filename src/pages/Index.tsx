@@ -3,14 +3,13 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import BenefitsSection from "../components/BenefitsSection";
-import SpringAnimation from "../components/SpringAnimation";
 
 const Index = () => {
   useEffect(() => {
     document.documentElement.classList.add('dark');
   }, []);
 
-  const registrationUrl = "https://rmggym.pl/slupsk-urodziny";
+  const registrationUrl = "https://rmggym.pl/wiosna-promo";
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
@@ -27,7 +26,7 @@ const Index = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/videos/rmggym-birthday.mp4" type="video/mp4" />
+            <source src="/videos/promo-wiosna-2025.mp4" type="video/mp4" />
             Twoja przeglądarka nie wspiera odtwarzania wideo.
           </video>
           <div className="absolute inset-0 bg-black/70" />
@@ -45,7 +44,7 @@ const Index = () => {
               Oferta ważna tylko przez 2 tygodnie
             </span>
             <h1 className="text-5xl md:text-7xl font-poppins font-extrabold text-white mb-6">
-              Świętuj z nami<br>3 urodziny RMG GYM Słupsk!
+              Świętuj z nami<br />3 urodziny RMG GYM Słupsk!
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Zgarnij karnet nawet za 1 zł za pierwszy miesiąc.
