@@ -10,11 +10,11 @@ const Index = () => {
     document.documentElement.classList.add('dark');
   }, []);
 
-  const registrationUrl = "https://rmggym.pl/wiosna-promo";
+  const registrationUrl = "https://rmggym.pl/slupsk-urodziny";
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
-      <SpringAnimation />
+      
       
       <Navbar />
 
@@ -27,7 +27,7 @@ const Index = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/videos/promo-wiosna-2025.mp4" type="video/mp4" />
+            <source src="/videos/rmggym-birthday.mp4" type="video/mp4" />
             Twoja przeglądarka nie wspiera odtwarzania wideo.
           </video>
           <div className="absolute inset-0 bg-black/50" />
@@ -42,13 +42,13 @@ const Index = () => {
             className="text-center"
           >
             <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-accent bg-accent/10">
-              Oferta Limitowana
+              Oferta ważna tylko przez 2 tygodnie
             </span>
             <h1 className="text-5xl md:text-7xl font-poppins font-extrabold text-white mb-6">
-              Obudź się na wiosnę z RMG GYM
+              Świętuj z nami 3 urodziny klubu!
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Trenuj przez pierwszy miesiąc już od 1 zł!
+              Zgarnij karnet nawet za 1 zł za pierwszy miesiąc.
             </p>
 
             <motion.a
@@ -57,9 +57,9 @@ const Index = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block px-8 py-4 bg-accent text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90"
+              className="inline-block px-8 py-4 bg-accent uppercase text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90"
             >
-              WCHODZĘ W TO!
+              Kupuję karnet w promocji
             </motion.a>
           </motion.div>
         </div>
