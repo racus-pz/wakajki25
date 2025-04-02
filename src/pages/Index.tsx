@@ -9,7 +9,7 @@ const Index = () => {
     document.documentElement.classList.add('dark');
   }, []);
 
-  const registrationUrl = "https://rmggym.pl/wiosna-promo";
+  const registrationUrl = "https://rmggym.pl/slupsk-urodziny";
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
