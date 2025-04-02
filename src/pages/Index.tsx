@@ -26,7 +26,7 @@ const Index = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/videos/promo-wiosna-2025.mp4" type="video/mp4" />
+            <source src="/videos/rmggym-birthday.mp4" type="video/mp4" />
             Twoja przeglądarka nie wspiera odtwarzania wideo.
           </video>
           <div className="absolute inset-0 bg-black/70" />
