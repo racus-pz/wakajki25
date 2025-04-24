@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
@@ -8,7 +7,7 @@ const Index = () => {
     document.documentElement.classList.add('dark');
   }, []);
 
-  const registrationUrl = "https://rmggym.pl/slupsk-urodziny";
+  const registrationUrl = "https://rmggym.pl/legnica-dni-otwarte";
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
@@ -129,4 +128,3 @@ const Index = () => {
 };
 
 export default Index;
-
