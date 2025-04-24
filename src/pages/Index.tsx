@@ -1,7 +1,7 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
-import BenefitsSection from "../components/BenefitsSection";
 
 const Index = () => {
   useEffect(() => {
@@ -23,7 +23,7 @@ const Index = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/videos/rmggym-birthday.mp4" type="video/mp4" />
+            <source src="/videos/rmggym-drzwi-otwarte.mp4" type="video/mp4" />
             Twoja przeglądarka nie wspiera odtwarzania wideo.
           </video>
           <div className="absolute inset-0 bg-black/70" />
@@ -55,7 +55,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="bg-background py-16 px-4">
+      <section className="bg-black py-40 px-4">
         <div className="container mx-auto">
           <p className="text-xl md:text-2xl text-center mb-12 max-w-4xl mx-auto">
             To idealna okazja, aby poznać naszą siłownię, skorzystać z darmowej konsultacji trenerskiej i wziąć udział w konkurencjach z nagrodami! Niezależnie od Twojego poziomu zaawansowania – u nas znajdziesz wszystko, czego potrzebujesz do treningu!
@@ -124,10 +124,9 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      <BenefitsSection />
     </div>
   );
 };
 
 export default Index;
+
