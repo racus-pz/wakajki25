@@ -193,7 +193,7 @@ const Index = () => {
       </AnimatePresence>
 
       {/* Information Section */}
-      <section className="bg-black py-32 px-4">
+      <section className="bg-black py-20 md:py-32 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-poppins font-bold text-center mb-12">
             {promo.infoPrice}
@@ -232,7 +232,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-black py-20 px-4">
+      <section className="bg-black pb-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-poppins font-bold text-center mb-6 text-white">
             Masz pytania?
