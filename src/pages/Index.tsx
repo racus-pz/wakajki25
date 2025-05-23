@@ -89,7 +89,7 @@ const Index = () => {
     const handleScroll = () => {
       if (heroSection) {
         const heroBottom = heroSection.getBoundingClientRect().bottom;
-        setIsButtonFixed(heroBottom < 100);
+        setIsButtonFixed(heroBottom < window.innerHeight * 0.2);
       }
     };
     handleScroll();
