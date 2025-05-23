@@ -146,6 +146,16 @@ const Index = () => {
             {promo.extraHeader && (
               <p className="text-xl md:text-2xl font-poppins font-bold text-white mb-4">{promo.extraHeader}</p>
             )}
+            <motion.a
+              href={registrationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block px-8 py-4 bg-accent uppercase text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90 text-center w-full md:w-auto mt-6"
+            >
+              Kupuję karnet w promocyjnej cenie
+            </motion.a>
           </motion.div>
         </div>
       </section>
