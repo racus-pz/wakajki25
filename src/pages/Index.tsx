@@ -247,7 +247,7 @@ const Index = () => {
                 Na czym polega wakacyjna promocja w RMG GYM?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
-                Oferujemy trzy karnety do wyboru, których ważność rozpoczyna się {promo.faqStart}. Płacisz z góry za cały okres wakacyjny ({promo.faqStartText}) już od {promo.faqPrice}, a po wakacjach obowiązuje cena karnetu, który wybierzesz.
+                Oferujemy trzy karnety do wyboru, których ważność rozpoczyna się {promo.faqStart}. Płacisz z góry za cały okres wakacyjny ({promo.faqStartText}) już od {promo.faqPrice}, <strong className="font-bold text-accent">a po jego zakończeniu obowiązuje cena wybranej przez Ciebie subskrypcji.</strong>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
@@ -255,7 +255,7 @@ const Index = () => {
                 Czy kupuję karnet tylko na wakacje?
               </AccordionTrigger>
               <AccordionContent className="text-lg">
-                Kupując wakacyjny karnet, zyskujesz supercenę na okres obowiązywania promocji ({promo.faqStartText}). Decydujesz się też na karnet, który rozpocznie się po zakończeniu wakacji.
+                <strong className="font-bold text-accent">Nie, karnet wakacyjny to promocyjny start dłuższej subskrypcji. Wybierając karnet wakacyjny w promocyjnej cenie, automatycznie aktywujesz karnet na kolejne miesiące – zgodnie z warunkami wybranej oferty.</strong>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
