@@ -107,7 +107,7 @@ const Index = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const registrationUrl = "https://rmggym.pl/legnica-dni-otwarte";
+  const registrationUrl = "https://rmggym.pl/wakajki-promo";
 
   return (
     <div className="min-h-screen bg-background dark:bg-background font-inter">
@@ -185,7 +185,7 @@ const Index = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-accent uppercase text-black font-poppins font-extrabold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/90 text-center w-full md:w-auto"
               >
-                Kupuję karnet w promocyjnej cenie
+                Kupuję karnet wakacyjny
               </motion.a>
             </div>
           </motion.div>
@@ -226,7 +226,7 @@ const Index = () => {
             </div>
           </div>
           <p className="text-center text-lg md:text-xl text-white font-semibold">
-            To najlepszy moment, żeby zacząć przygodę z siłownią i zagwarantować sobie cenę karnetu na dłuuuużej.
+            Nie przegap lata i tej oferty! To mogą być Twoje najlepsze wakacje z RMG GYM.
           </p>
         </div>
       </section>
