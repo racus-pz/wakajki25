@@ -179,7 +179,7 @@ const Index = () => {
             <div className="container mx-auto px-4 flex justify-center">
               <motion.a
                 href={registrationUrl}
-                target="_blank"
+                target="_self"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
