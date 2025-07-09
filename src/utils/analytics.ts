@@ -1,5 +1,7 @@
 import ReactGA from 'react-ga';
 
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="59785e55-f4fd-41cc-b365-2b99c90566d8" data-blockingmode="auto" type="text/javascript"></script>
+
 // Initialize Facebook Pixel
 declare const fbq: any;
 
